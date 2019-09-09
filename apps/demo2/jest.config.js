@@ -17,5 +17,9 @@ module.exports = {
         "astTransformers":["jest-preset-angular/InlineHtmlStripStylesTransformer"]
         }
     },
-    setupFilesAfterEnv: ["/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/test-setup.ts"] 
+    "moduleNameMapper": {
+      "@mutation-demo/components-sample": "C:/Users/hcordobab/Downloads/nx-mutation/libs/components-sample/src/index.ts"
+      
+    },
+    // setupFilesAfterEnv: ["/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/test-setup.ts"] 
 };
