@@ -1,0 +1,211 @@
+22:13:38 (75808) INFO ConfigReader No config file specified. Running with command line arguments.
+22:13:39 (75808) DEBUG BroadcastReporter Broadcasting to reporters ["html"]
+22:13:38 (75808) INFO ConfigReader Use `stryker init` command to generate your config file.
+22:13:38 (75808) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator
+22:13:38 (75808) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/html-reporter" (matched with expression @stryker-mutator/*)
+22:13:38 (75808) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/javascript-mutator" (matched with expression @stryker-mutator/*)
+22:13:38 (75808) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+22:13:38 (75808) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/karma-runner" (matched with expression @stryker-mutator/*)
+22:13:38 (75808) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+22:13:38 (75808) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/html-reporter
+22:13:38 (75808) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/javascript-mutator
+22:13:39 (75808) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/jest-runner
+22:13:39 (75808) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/karma-runner
+22:13:39 (75808) WARN PluginLoader Error during loading "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/karma-runner" plugin:
+  Cannot find module 'karma'
+22:13:39 (75808) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/typescript
+22:13:39 (75808) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/reporters/index.js
+22:13:39 (75808) DEBUG TypescriptConfigEditor No 'tsconfigFile' specified, not loading any config
+22:13:39 (75808) WARN InputFileResolver No files marked to be mutated, Stryker will perform a dry-run without actually mutating anything. You can configure the `mutate` property in your stryker.conf.js file (or use `--mutate` via command line).
+22:13:39 (75808) DEBUG InputFileResolver All input files: [
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.scss",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.spec.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/stryker.conf.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/bind-mutation-test-report.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/index.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/mutation-test-elements.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/stryker-80x80.png",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/stryker.log",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/yarn.lock",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.editorconfig",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.gitignore",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.prettierignore",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.prettierrc",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.vscode/extensions.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/README.md",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/angular.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/cypress.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/fixtures/example.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/integration/app.spec.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/plugins/index.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/support/app.po.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/support/commands.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/support/index.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/tsconfig.e2e.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/tsconfig.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/tslint.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/browserslist",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/jest.config.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.scss",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.spec.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.module.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/assets/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/environments/environment.prod.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/environments/environment.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/favicon.ico",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/index.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/main.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/polyfills.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/styles.scss",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/test-setup.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tsconfig.app.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tsconfig.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tsconfig.spec.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tslint.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/jest.config.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/libs/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/nx.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/package-lock.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/package.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tools/schematics/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tools/tsconfig.tools.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tsconfig.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tslint.json"
+]
+22:13:39 (75808) DEBUG InputFileResolver Files to mutate: []
+22:13:39 (75808) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+22:13:39 (75808) INFO InitialTestExecutor Starting initial test run. This may take a while.
+22:13:39 (75808) DEBUG Sandbox Creating a sandbox for files in /Users/svelasquezg/Documents/personal/mutation-demo/.stryker-tmp/sandbox5040124
+22:13:39 (75808) DEBUG Sandbox Creating test runner 0
+22:13:39 (75808) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+22:13:45 (75808) INFO InitialTestExecutor Initial test run succeeded. Ran 1 tests in 6 seconds (net 6220 ms, overhead 2 ms).
+22:13:45 (75808) INFO MutatorFacade It's a mutant-free world, nothing to test.
+22:13:55 (75865) INFO ConfigReader No config file specified. Running with command line arguments.
+22:13:55 (75865) DEBUG BroadcastReporter Broadcasting to reporters ["html"]
+22:13:55 (75865) INFO ConfigReader Use `stryker init` command to generate your config file.
+22:13:55 (75865) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator
+22:13:55 (75865) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/html-reporter" (matched with expression @stryker-mutator/*)
+22:13:55 (75865) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/javascript-mutator" (matched with expression @stryker-mutator/*)
+22:13:55 (75865) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+22:13:55 (75865) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/karma-runner" (matched with expression @stryker-mutator/*)
+22:13:55 (75865) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+22:13:55 (75865) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/html-reporter
+22:13:55 (75865) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/javascript-mutator
+22:13:55 (75865) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/jest-runner
+22:13:55 (75865) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/karma-runner
+22:13:55 (75865) WARN PluginLoader Error during loading "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/karma-runner" plugin:
+  Cannot find module 'karma'
+22:13:55 (75865) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/typescript
+22:13:55 (75865) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/reporters/index.js
+22:13:55 (75865) DEBUG TypescriptConfigEditor No 'tsconfigFile' specified, not loading any config
+22:13:55 (75865) WARN InputFileResolver No files marked to be mutated, Stryker will perform a dry-run without actually mutating anything. You can configure the `mutate` property in your stryker.conf.js file (or use `--mutate` via command line).
+22:13:55 (75865) DEBUG InputFileResolver All input files: [
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.scss",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.spec.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/message/message.component.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/stryker.conf.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/bind-mutation-test-report.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/index.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/mutation-test-elements.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/reports/mutation/html/stryker-80x80.png",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/stryker.log",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/yarn.lock",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.editorconfig",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.gitignore",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.prettierignore",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.prettierrc",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/.vscode/extensions.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/README.md",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/angular.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/cypress.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/fixtures/example.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/integration/app.spec.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/plugins/index.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/support/app.po.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/support/commands.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/src/support/index.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/tsconfig.e2e.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/tsconfig.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo-e2e/tslint.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/browserslist",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/jest.config.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.scss",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.spec.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.component.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/app/app.module.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/assets/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/environments/environment.prod.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/environments/environment.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/favicon.ico",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/index.html",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/main.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/polyfills.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/styles.scss",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/src/test-setup.ts",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tsconfig.app.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tsconfig.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tsconfig.spec.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo/tslint.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/jest.config.js",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/libs/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/nx.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/package-lock.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/package.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tools/schematics/.gitkeep",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tools/tsconfig.tools.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tsconfig.json",
+  "/Users/svelasquezg/Documents/personal/mutation-demo/tslint.json"
+]
+22:13:55 (75865) DEBUG InputFileResolver Files to mutate: []
+22:13:55 (75865) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+22:13:55 (75865) INFO InitialTestExecutor Starting initial test run. This may take a while.
+22:13:55 (75865) DEBUG Sandbox Creating a sandbox for files in /Users/svelasquezg/Documents/personal/mutation-demo/.stryker-tmp/sandbox7477039
+22:13:55 (75865) DEBUG Sandbox Creating test runner 0
+22:13:55 (75865) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+22:14:00 (75865) INFO InitialTestExecutor Initial test run succeeded. Ran 1 tests in 4 seconds (net 4754 ms, overhead 2 ms).
+22:14:00 (75865) INFO MutatorFacade It's a mutant-free world, nothing to test.
+00:09:42 (96819) INFO ConfigReader No config file specified. Running with command line arguments.
+00:09:42 (96819) ERROR StrykerCli an error occurred { Error: Could not inject "InputFileResolver". Inner error: Could not inject "BroadcastReporter". Inner error: Cannot load Reporter plugin "html". Did you forget to install it? Loaded Reporter plugins were: clear-text, progress, progress-append-only, dots, event-recorder, dashboard
+    at ClassProvider.injectClass (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:36:19)
+    at ClassProvider.injectClass (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:93:22)
+    at Stryker.runMutationTest (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/Stryker.js:43:48)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+  innerError:
+   { Error: Could not inject "BroadcastReporter". Inner error: Cannot load Reporter plugin "html". Did you forget to install it? Loaded Reporter plugins were: clear-text, progress, progress-append-only, dots, event-recorder, dashboard
+       at ClassProvider.injectClass (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:36:19)
+       at ClassProvider.injectClass (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:93:22)
+       at ClassProvider.result (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:176:21)
+       at ClassProvider.resolveInternal (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:134:36)
+       at ClassProvider.resolve (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:71:21)
+       at ClassProvider.resolve (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:101:22)
+       at FactoryProvider.resolveInternal (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:145:32)
+       at FactoryProvider.resolve (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:71:21)
+       at FactoryProvider.resolve (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:101:22)
+       at ClassProvider.resolveInternal (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:145:32)
+     innerError:
+      Error: Cannot load Reporter plugin "html". Did you forget to install it? Loaded Reporter plugins were: clear-text, progress, progress-append-only, dots, event-recorder, dashboard
+          at PluginLoader.resolve (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/di/PluginLoader.js:30:23)
+          at PluginCreator.create (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/di/PluginCreator.js:11:44)
+          at BroadcastReporter.createReporter (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/reporters/BroadcastReporter.js:20:59)
+          at BroadcastReporter.options.reporters.forEach.reporterName (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/reporters/BroadcastReporter.js:12:61)
+          at Array.forEach (<anonymous>)
+          at new BroadcastReporter (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/reporters/BroadcastReporter.js:12:32)
+          at ClassProvider.injectClass (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:33:20)
+          at ClassProvider.injectClass (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:93:22)
+          at ClassProvider.result (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:176:21)
+          at ClassProvider.resolveInternal (/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/node_modules/typed-inject/src/InjectorImpl.js:134:36) } }
+00:11:47 (96914) INFO ConfigReader No config file specified. Running with command line arguments.
+00:11:47 (96914) DEBUG BroadcastReporter Broadcasting to reporters ["html"]
+00:11:47 (96914) INFO ConfigReader Use `stryker init` command to generate your config file.
+00:11:47 (96914) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator
+00:11:47 (96914) DEBUG PluginLoader Loading plugin "/Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/html-reporter" (matched with expression @stryker-mutator/*)
+00:11:47 (96914) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/html-reporter
+00:11:47 (96914) DEBUG PluginLoader Loading plugins /Users/svelasquezg/Documents/personal/mutation-demo/node_modules/@stryker-mutator/core/src/reporters/index.js
