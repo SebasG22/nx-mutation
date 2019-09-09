@@ -19,8 +19,8 @@ module.exports = function(config) {
     './jest.config.js',
   './tsconfig.json'],
       mutate: [
-        './apps/demo2/src/**/*.ts',
-        '!./apps/demo2/src/**/*.spec.js'
+        './apps/demo2/src/app/**/*.ts',
+        '!./apps/demo2/src/**/*.spec.ts'
 
         ]
   });
