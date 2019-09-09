@@ -4,7 +4,6 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    // "moduleResolution": "",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -15,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mutation-demo/components": ["libs/components/src/index.ts"],
+      "@mutation-demo/components-sample": [
+        "libs/components-sample/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,11 +1,13 @@
 import 'jest-preset-angular';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ComponentsSampleModule } from '@mutation-demo/components-sample';
 
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ComponentsSampleModule],
       declarations: [AppComponent]
     }).compileComponents();
   }));

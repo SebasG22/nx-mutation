@@ -6,16 +6,16 @@ module.exports = {
     'jest-preset-angular/AngularSnapshotSerializer.js',
     'jest-preset-angular/HTMLCommentSerializer.js'
   ],
-  // globals:
-  //  {"ts-jest":{
-  //      "tsConfig":"/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/tsconfig.spec.json",
-  //      tsConfig: 'apps/demo2/tsconfig.spec.json',
-  //      "diagnostics":{
-  //          "warnOnly":true
-  //       },
-  //       stringifyContentPathRegex: '\\.html$',
-  //       "astTransformers":["jest-preset-angular/InlineHtmlStripStylesTransformer"]
-  //       }
-  //   },
-    // setupFilesAfterEnv: ["/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/test-setup.ts"] 
+  globals:
+   {"ts-jest":{
+       "tsConfig":"/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/tsconfig.spec.json",
+       tsConfig: 'apps/demo2/tsconfig.spec.json',
+       "diagnostics":{
+           "warnOnly":true
+        },
+        stringifyContentPathRegex: '\\.html$',
+        "astTransformers":["jest-preset-angular/InlineHtmlStripStylesTransformer"]
+        }
+    },
+    setupFilesAfterEnv: ["/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/test-setup.ts"] 
 };
