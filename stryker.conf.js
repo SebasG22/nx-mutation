@@ -6,12 +6,11 @@ module.exports = function(config) {
     jest: {
         config: require('./apps/demo2/jest.config.js'),
     },
-    transpilers: ['typescript'],
     coverageAnalysis: 'off',
     tsconfigFile: 'tsconfig.json',
-    transpilers: [
-      'typescript',
-  ],
+  //   transpilers: [
+  //     'typescript',
+  // ],
     files: [
       './apps/demo2/src/**/*.ts',
       './apps/demo2/src/**/*.html',
@@ -20,7 +19,7 @@ module.exports = function(config) {
     './jest.config.js',
   './tsconfig.json'],
       mutate: [
-        './apps/demo2/src/**/*.js',
+        './apps/demo2/src/**/*.ts',
         '!./apps/demo2/src/**/*.spec.js'
 
         ]
