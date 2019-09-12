@@ -18,6 +18,7 @@ module.exports = function(config) {
       './jest.config.js',
       './tsconfig.json'
     ],
-    mutate: ['./apps/demo2/src/app/**/*.ts', '!./apps/demo2/src/**/*.spec.ts']
+    mutate: ['./apps/demo2/src/app/**/*.ts', '!./apps/demo2/src/**/*.spec.ts'],
+    reporters: ['html']
   });
 };

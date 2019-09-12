@@ -8,8 +8,8 @@ module.exports = {
   ],
   globals: {
     'ts-jest': {
-      // tsConfig:
-      //   '/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/tsconfig.spec.json',
+      tsConfig:
+        '/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/tsconfig.spec.json',
       tsConfig: 'apps/demo2/tsconfig.spec.json',
       diagnostics: {
         warnOnly: true
@@ -22,6 +22,6 @@ module.exports = {
   moduleNameMapper: {
     '@mutation-demo/components-sample':
       '<rootDir>/libs/components-sample/src/index.ts'
-  }
+  },
   // setupFilesAfterEnv: ["/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/test-setup.ts"]
 };

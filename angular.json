@@ -85,6 +85,39 @@
             "jestConfig": "apps/demo2/jest.config.js",
             "tsConfig": "apps/demo2/tsconfig.spec.json",
             "setupFile": "apps/demo2/src/test-setup.ts"
+
+          }
+        },
+        "mutate": {
+          "builder": "@pinebox/angular-builder:mutate",
+          "options": {
+            "mutator": "typescript",
+            "packageManager": "yarn",
+            "testRunner": "jest",
+            "plugins": ["@stryker-mutator/typescript","@stryker-mutator/jest-runner","@stryker-mutator/html-reporter"],
+            "jest": {
+                "config": "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/jest.config.js"
+            },
+            "coverageAnalysis": "off",
+            "tsconfigFile": "tsconfig.json",
+            "files": [
+                "/Users/svelasquezg/Documents/personal/mutation-demo/libs/**/*.ts",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/libs/**/*.html",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.ts",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.html",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.scss",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/**/*.json",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/jest.config.js",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/tsconfig.json",
+                "/Users/svelasquezg/Documents/personal/mutation-demo/package.json"
+            ],
+            "mutate": [
+              "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/app/**/*.ts",
+              "!/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.spec.ts"],
+            "fileLogLevel": "trace",
+            "logLevel": "trace",
+            "timeoutMS": 5000000,
+            "reporters": ["html"]
           }
         }
       }
