@@ -100,22 +100,22 @@
             },
             "coverageAnalysis": "off",
             "tsconfigFile": "tsconfig.json",
-            "files": [
-                "/Users/svelasquezg/Documents/personal/mutation-demo/libs/**/*.ts",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/libs/**/*.html",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.ts",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.html",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.scss",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/**/*.json",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/jest.config.js",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/tsconfig.json",
-                "/Users/svelasquezg/Documents/personal/mutation-demo/package.json"
-            ],
+            "files": [ "./libs/**/*.ts",
+              "./libs/**/*.html",
+              "./apps/demo2/src/**/*.ts",
+              "./apps/demo2/src/**/*.html",
+              "./apps/demo2/src/**/*.scss",
+              "./apps/demo2/**/*.json",
+              "./apps/demo2/jest.config.js",
+              "./apps/demo2/tsconfig.json",
+              "./apps/demo2/package.json"
+             ],
             "mutate": [
-              "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/app/**/*.ts",
-              "!/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/src/**/*.spec.ts"],
-            "fileLogLevel": "trace",
-            "logLevel": "trace",
+              "./apps/demo2/src/**/*.ts",
+              "./apps/demo2/src/**/*.html",
+     "!./apps/demo2/src/**/*.spec.ts"],
+            "fileLogLevel": "off",
+            "logLevel": "off",
             "timeoutMS": 5000000,
             "reporters": ["html"]
           }
