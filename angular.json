@@ -85,7 +85,6 @@
             "jestConfig": "apps/demo2/jest.config.js",
             "tsConfig": "apps/demo2/tsconfig.spec.json",
             "setupFile": "apps/demo2/src/test-setup.ts"
-
           }
         },
         "mutate": {
@@ -94,13 +93,18 @@
             "mutator": "typescript",
             "packageManager": "yarn",
             "testRunner": "jest",
-            "plugins": ["@stryker-mutator/typescript","@stryker-mutator/jest-runner","@stryker-mutator/html-reporter"],
+            "plugins": [
+              "@stryker-mutator/typescript",
+              "@stryker-mutator/jest-runner",
+              "@stryker-mutator/html-reporter"
+            ],
             "jest": {
-                "config": "/Users/svelasquezg/Documents/personal/mutation-demo/apps/demo2/jest.config.js"
+              "config": "./apps/demo2/jest.config.js"
             },
             "coverageAnalysis": "off",
             "tsconfigFile": "tsconfig.json",
-            "files": [ "./libs/**/*.ts",
+            "files": [
+              "./libs/**/*.ts",
               "./libs/**/*.html",
               "./apps/demo2/src/**/*.ts",
               "./apps/demo2/src/**/*.html",
@@ -109,13 +113,14 @@
               "./apps/demo2/jest.config.js",
               "./apps/demo2/tsconfig.json",
               "./apps/demo2/package.json"
-             ],
+            ],
             "mutate": [
               "./apps/demo2/src/**/*.ts",
               "./apps/demo2/src/**/*.html",
-     "!./apps/demo2/src/**/*.spec.ts"],
-            "fileLogLevel": "off",
-            "logLevel": "off",
+              "!./apps/demo2/src/**/*.spec.ts"
+            ],
+            "fileLogLevel": "debug",
+            "logLevel": "debug",
             "timeoutMS": 5000000,
             "reporters": ["html"]
           }
@@ -204,6 +209,131 @@
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "scss"
+        }
+      }
+    },
+    "demo3": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/demo3",
+      "sourceRoot": "apps/demo3/src",
+      "prefix": "mutation-demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/demo3",
+            "index": "apps/demo3/src/index.html",
+            "main": "apps/demo3/src/main.ts",
+            "polyfills": "apps/demo3/src/polyfills.ts",
+            "tsConfig": "apps/demo3/tsconfig.app.json",
+            "aot": false,
+            "assets": ["apps/demo3/src/favicon.ico", "apps/demo3/src/assets"],
+            "styles": ["apps/demo3/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/demo3/src/environments/environment.ts",
+                  "with": "apps/demo3/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "demo3:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo3:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo3:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/demo3/tsconfig.app.json",
+              "apps/demo3/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/demo3/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/demo3/jest.config.js",
+            "tsConfig": "apps/demo3/tsconfig.spec.json",
+            "setupFile": "apps/demo3/src/test-setup.ts"
+          }
+        },
+        "mutate": {
+          "builder": "@pinebox/angular-builder:mutate",
+          "options": {
+            "configFile": "./apps/demo3/stryker.config.js",
+            "runnerFile": "./apps/demo3/jest.config.js",
+            "jest": {
+              "config": "./apps/demo3/jest.config.js"
+            }
+          }
+        }
+      }
+    },
+    "demo3-e2e": {
+      "root": "apps/demo3-e2e",
+      "sourceRoot": "apps/demo3-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/demo3-e2e/cypress.json",
+            "tsConfig": "apps/demo3-e2e/tsconfig.e2e.json",
+            "devServerTarget": "demo3:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "demo3:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/demo3-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/demo3-e2e/**"]
+          }
         }
       }
     }

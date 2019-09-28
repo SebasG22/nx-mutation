@@ -1215,10 +1215,10 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
-"@pinebox/angular-builder@1.0.0-alpha.11":
-  version "1.0.0-alpha.11"
-  resolved "https://registry.npmjs.org/@pinebox/angular-builder/-/angular-builder-1.0.0-alpha.11.tgz#66f6c5e08059f22b29e7fc68958df1a31b32ea5f"
-  integrity sha512-yp7FueFp9JTyS6ZHxZSZwNUeO9B6aQv0pmrvUZPdsqMEED8a/oAXYLd9Vv315vcr5759HYUFDSeyHc6t8QIK4w==
+"@pinebox/angular-builder@^1.0.0-alpha.16":
+  version "1.0.0-alpha.16"
+  resolved "https://registry.npmjs.org/@pinebox/angular-builder/-/angular-builder-1.0.0-alpha.16.tgz#e693dab552388c3934a75feec93eb8695f3a2381"
+  integrity sha512-tErZr52kSYdR2f3z3aexPJ5iSz7OTVjQFv19eKzt7HaVwiUxZW7fz4zUHccX32tS1KcPUZH27Rkw5ft55WZSuQ==
 
 "@schematics/angular@8.1.1":
   version "8.1.1"

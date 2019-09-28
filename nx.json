@@ -25,6 +25,12 @@
     },
     "components-sample": {
       "tags": []
+    },
+    "demo3-e2e": {
+      "tags": []
+    },
+    "demo3": {
+      "tags": []
     }
   }
 }

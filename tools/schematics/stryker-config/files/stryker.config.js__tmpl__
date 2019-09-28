@@ -5,15 +5,14 @@ module.exports = function(config) {
     testRunner: '<%= testRunner %>',
     <% if (testRunner === 'jest'){ %>
     jest: {
-      config: '<%= jestPath %>'
+      config: require('<%= jestPath %>')
     },<% } %>
     coverageAnalysis: '<%= coverageAnalysis %>',
     tsconfigFile: 'tsconfig.json',
     files: [<% for(let file of files){%> '<%= file %>',
     <%}%>],
     mutate: [<% for(let file of mutate){ %> '<%= file %>',
-    <% } %>
-    ],
+    <% } %>],
     reporters: ['<%= reporters %>']
   });
 };

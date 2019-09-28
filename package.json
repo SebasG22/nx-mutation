@@ -38,7 +38,7 @@
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@angular/router": "^8.0.0",
     "@nrwl/angular": "8.4.12",
-    "@pinebox/angular-builder": "1.0.0-alpha.11",
+    "@pinebox/angular-builder": "^1.0.0-alpha.16",
     "@stryker-mutator/core": "^2.0.2",
     "@stryker-mutator/html-reporter": "^2.1.0",
     "@stryker-mutator/javascript-mutator": "^2.0.2",

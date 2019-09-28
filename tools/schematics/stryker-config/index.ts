@@ -47,7 +47,6 @@ function generateFiles(options: StrykerProjectSchema): Rule {
             `./${projectConfig.root}/src/**/*.ts`,
             `!./${projectConfig.root}/src/**/*.spec.ts`,
           ],
-          offsetFromRoot: offsetFromRoot(projectConfig.root)
         }),
 
         move(projectConfig.root),
