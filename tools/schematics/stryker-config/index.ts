@@ -7,10 +7,7 @@ import {
   template,
   move
 } from '@angular-devkit/schematics';
-import {
-  getProjectConfig,
-  offsetFromRoot
-} from '@nrwl/workspace';
+import { getProjectConfig, offsetFromRoot } from '@nrwl/workspace';
 import { mergeWith } from '@angular-devkit/schematics';
 
 export interface StrykerProjectSchema {
@@ -31,28 +28,27 @@ function generateFiles(options: StrykerProjectSchema): Rule {
         template({
           tmpl: '',
           ...options,
-          jestPath: `./${projectConfig.root}/jest.config.js`,
           files: [
             `./libs/**/*.ts`,
             `./libs/**/*.html`,
             `./${projectConfig.root}/src/**/*.ts`,
             `./${projectConfig.root}/src/**/*.html`,
             `./${projectConfig.root}/src/**/*.scss`,
-            `./${projectConfig.root}/**/*.json`,
-            `./${projectConfig.root}/jest.config.js`,
-            `./${projectConfig.root}/tsconfig.json`,
-            `./${projectConfig.root}/package.json`,
+            `./${projectConfig.root}/*.json`,
+            `./${projectConfig.root}/*.js`,
+            './*.js',
+            './tsconfig.json',
+            './package.json'
           ],
           mutate: [
             `./${projectConfig.root}/src/**/*.ts`,
-            `!./${projectConfig.root}/src/**/*.spec.ts`,
-          ],
+            `!./${projectConfig.root}/src/**/*.spec.ts`
+          ]
         }),
 
-        move(projectConfig.root),
+        move(projectConfig.root)
       ])
     )(host, context);
-    
   };
 }
 

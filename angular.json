@@ -1,36 +1,36 @@
 {
   "version": 1,
   "projects": {
-    "demo2": {
+    "jest-without-stryker-config": {
       "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/demo2",
-      "sourceRoot": "apps/demo2/src",
+      "root": "apps/jest-without-stryker-config",
+      "sourceRoot": "apps/jest-without-stryker-config/src",
       "prefix": "mutation-demo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/demo2",
-            "index": "apps/demo2/src/index.html",
-            "main": "apps/demo2/src/main.ts",
-            "polyfills": "apps/demo2/src/polyfills.ts",
-            "tsConfig": "apps/demo2/tsconfig.app.json",
+            "outputPath": "dist/apps/jest-without-stryker-config",
+            "index": "apps/jest-without-stryker-config/src/index.html",
+            "main": "apps/jest-without-stryker-config/src/main.ts",
+            "polyfills": "apps/jest-without-stryker-config/src/polyfills.ts",
+            "tsConfig": "apps/jest-without-stryker-config/tsconfig.app.json",
             "aot": false,
-            "assets": ["apps/demo2/src/favicon.ico", "apps/demo2/src/assets"],
-            "styles": ["apps/demo2/src/styles.scss"],
+            "assets": ["apps/jest-without-stryker-config/src/favicon.ico", "apps/jest-without-stryker-config/src/assets"],
+            "styles": ["apps/jest-without-stryker-config/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/demo2/src/environments/environment.ts",
-                  "with": "apps/demo2/src/environments/environment.prod.ts"
+                  "replace": "apps/jest-without-stryker-config/src/environments/environment.ts",
+                  "with": "apps/jest-without-stryker-config/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -55,36 +55,36 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo2:build"
+            "browserTarget": "jest-without-stryker-config:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo2:build:production"
+              "browserTarget": "jest-without-stryker-config:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo2:build"
+            "browserTarget": "jest-without-stryker-config:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/demo2/tsconfig.app.json",
-              "apps/demo2/tsconfig.spec.json"
+              "apps/jest-without-stryker-config/tsconfig.app.json",
+              "apps/jest-without-stryker-config/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/demo2/**"]
+            "exclude": ["**/node_modules/**", "!apps/jest-without-stryker-config/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/demo2/jest.config.js",
-            "tsConfig": "apps/demo2/tsconfig.spec.json",
-            "setupFile": "apps/demo2/src/test-setup.ts"
+            "jestConfig": "apps/jest-without-stryker-config/jest.config.js",
+            "tsConfig": "apps/jest-without-stryker-config/tsconfig.spec.json",
+            "setupFile": "apps/jest-without-stryker-config/src/test-setup.ts"
           }
         },
         "mutate": {
@@ -92,32 +92,30 @@
           "options": {
             "mutator": "typescript",
             "packageManager": "yarn",
-            "testRunner": "jest",
-            "plugins": [
-              "@stryker-mutator/typescript",
-              "@stryker-mutator/jest-runner",
-              "@stryker-mutator/html-reporter"
-            ],
-            "jest": {
-              "config": "./apps/demo2/jest.config.js"
+            "testRunner": "command",
+            "testPackage":"jest",
+            "commandRunner": { 
+              "command": "yarn test jest-without-stryker-config" 
             },
+            "plugins": [
+              "@stryker-mutator/typescript"
+            ],
             "coverageAnalysis": "off",
-            "tsconfigFile": "tsconfig.json",
             "files": [
               "./libs/**/*.ts",
               "./libs/**/*.html",
-              "./apps/demo2/src/**/*.ts",
-              "./apps/demo2/src/**/*.html",
-              "./apps/demo2/src/**/*.scss",
-              "./apps/demo2/**/*.json",
-              "./apps/demo2/jest.config.js",
-              "./apps/demo2/tsconfig.json",
-              "./apps/demo2/package.json"
+              "./apps/jest-without-stryker-config/src/**/*.ts",
+              "./apps/jest-without-stryker-config/src/**/*.html",
+              "./apps/jest-without-stryker-config/src/**/*.scss",
+              "./apps/jest-without-stryker-config/**/*.json",
+              "./apps/jest-without-stryker-config/jest.config.js",
+              "./apps/jest-without-stryker-config/tsconfig.json",
+              "./package.json"
             ],
             "mutate": [
-              "./apps/demo2/src/**/*.ts",
-              "./apps/demo2/src/**/*.html",
-              "!./apps/demo2/src/**/*.spec.ts"
+              "./apps/jest-without-stryker-config/src/**/*.ts",
+              "./apps/jest-without-stryker-config/src/**/*.html",
+              "!./apps/jest-without-stryker-config/src/**/*.spec.ts"
             ],
             "fileLogLevel": "debug",
             "logLevel": "debug",
@@ -127,29 +125,29 @@
         }
       }
     },
-    "demo2-e2e": {
-      "root": "apps/demo2-e2e",
-      "sourceRoot": "apps/demo2-e2e/src",
+    "jest-without-stryker-config-e2e": {
+      "root": "apps/jest-without-stryker-config-e2e",
+      "sourceRoot": "apps/jest-without-stryker-config-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/demo2-e2e/cypress.json",
-            "tsConfig": "apps/demo2-e2e/tsconfig.e2e.json",
-            "devServerTarget": "demo2:serve"
+            "cypressConfig": "apps/jest-without-stryker-config-e2e/cypress.json",
+            "tsConfig": "apps/jest-without-stryker-config-e2e/tsconfig.e2e.json",
+            "devServerTarget": "jest-without-stryker-config:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "demo2:serve:production"
+              "devServerTarget": "jest-without-stryker-config:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/demo2-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/demo2-e2e/**"]
+            "tsConfig": ["apps/jest-without-stryker-config-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/jest-without-stryker-config-e2e/**"]
           }
         }
       }
@@ -212,36 +210,36 @@
         }
       }
     },
-    "demo3": {
+    "jest-with-stryker-config": {
       "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/demo3",
-      "sourceRoot": "apps/demo3/src",
+      "root": "apps/jest-with-stryker-config",
+      "sourceRoot": "apps/jest-with-stryker-config/src",
       "prefix": "mutation-demo",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/demo3",
-            "index": "apps/demo3/src/index.html",
-            "main": "apps/demo3/src/main.ts",
-            "polyfills": "apps/demo3/src/polyfills.ts",
-            "tsConfig": "apps/demo3/tsconfig.app.json",
+            "outputPath": "dist/apps/jest-with-stryker-config",
+            "index": "apps/jest-with-stryker-config/src/index.html",
+            "main": "apps/jest-with-stryker-config/src/main.ts",
+            "polyfills": "apps/jest-with-stryker-config/src/polyfills.ts",
+            "tsConfig": "apps/jest-with-stryker-config/tsconfig.app.json",
             "aot": false,
-            "assets": ["apps/demo3/src/favicon.ico", "apps/demo3/src/assets"],
-            "styles": ["apps/demo3/src/styles.scss"],
+            "assets": ["apps/jest-with-stryker-config/src/favicon.ico", "apps/jest-with-stryker-config/src/assets"],
+            "styles": ["apps/jest-with-stryker-config/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/demo3/src/environments/environment.ts",
-                  "with": "apps/demo3/src/environments/environment.prod.ts"
+                  "replace": "apps/jest-with-stryker-config/src/environments/environment.ts",
+                  "with": "apps/jest-with-stryker-config/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -266,73 +264,223 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo3:build"
+            "browserTarget": "jest-with-stryker-config:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo3:build:production"
+              "browserTarget": "jest-with-stryker-config:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo3:build"
+            "browserTarget": "jest-with-stryker-config:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/demo3/tsconfig.app.json",
-              "apps/demo3/tsconfig.spec.json"
+              "apps/jest-with-stryker-config/tsconfig.app.json",
+              "apps/jest-with-stryker-config/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/demo3/**"]
+            "exclude": ["**/node_modules/**", "!apps/jest-with-stryker-config/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/demo3/jest.config.js",
-            "tsConfig": "apps/demo3/tsconfig.spec.json",
-            "setupFile": "apps/demo3/src/test-setup.ts"
+            "jestConfig": "apps/jest-with-stryker-config/jest.config.js",
+            "tsConfig": "apps/jest-with-stryker-config/tsconfig.spec.json",
+            "setupFile": "apps/jest-with-stryker-config/src/test-setup.ts"
           }
         },
         "mutate": {
           "builder": "@pinebox/angular-builder:mutate",
           "options": {
-            "configFile": "./apps/demo3/stryker.config.js",
-            "runnerFile": "./apps/demo3/jest.config.js",
-            "jest": {
-              "config": "./apps/demo3/jest.config.js"
-            }
+            "configFile": "./apps/jest-with-stryker-config/stryker.config.js"
           }
         }
       }
     },
-    "demo3-e2e": {
-      "root": "apps/demo3-e2e",
-      "sourceRoot": "apps/demo3-e2e/src",
+    "jest-with-stryker-config-e2e": {
+      "root": "apps/jest-with-stryker-config-e2e",
+      "sourceRoot": "apps/jest-with-stryker-config-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/demo3-e2e/cypress.json",
-            "tsConfig": "apps/demo3-e2e/tsconfig.e2e.json",
-            "devServerTarget": "demo3:serve"
+            "cypressConfig": "apps/jest-with-stryker-config-e2e/cypress.json",
+            "tsConfig": "apps/jest-with-stryker-config-e2e/tsconfig.e2e.json",
+            "devServerTarget": "jest-with-stryker-config:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "demo3:serve:production"
+              "devServerTarget": "jest-with-stryker-config:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/demo3-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/demo3-e2e/**"]
+            "tsConfig": ["apps/jest-with-stryker-config-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/jest-with-stryker-config-e2e/**"]
+          }
+        }
+      }
+    },
+    "karma-without-stryker-config": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/karma-without-stryker-config",
+      "sourceRoot": "apps/karma-without-stryker-config/src",
+      "prefix": "mutation-demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/karma-without-stryker-config",
+            "index": "apps/karma-without-stryker-config/src/index.html",
+            "main": "apps/karma-without-stryker-config/src/main.ts",
+            "polyfills": "apps/karma-without-stryker-config/src/polyfills.ts",
+            "tsConfig": "apps/karma-without-stryker-config/tsconfig.app.json",
+            "aot": false,
+            "assets": ["apps/karma-without-stryker-config/src/favicon.ico", "apps/karma-without-stryker-config/src/assets"],
+            "styles": ["apps/karma-without-stryker-config/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/karma-without-stryker-config/src/environments/environment.ts",
+                  "with": "apps/karma-without-stryker-config/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "karma-without-stryker-config:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "karma-without-stryker-config:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "karma-without-stryker-config:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/karma-without-stryker-config/tsconfig.app.json",
+              "apps/karma-without-stryker-config/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/karma-without-stryker-config/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/karma-without-stryker-config/src/test.ts",
+            "tsConfig": "apps/karma-without-stryker-config/tsconfig.spec.json",
+            "karmaConfig": "apps/karma-without-stryker-config/karma.conf.js",
+            "polyfills": "apps/karma-without-stryker-config/src/polyfills.ts",
+            "styles": [],
+            "scripts": [],
+            "assets": []
+          }
+        },
+        "mutate": {
+          "builder": "@pinebox/angular-builder:mutate",
+          "options": {
+            "mutator": "typescript",
+            "packageManager": "yarn",
+            "testRunner": "command",
+            "commandRunner": { 
+              "command": "yarn test karma-without-stryker-config" 
+            },
+            "plugins": [
+              "@stryker-mutator/typescript",
+              "@stryker-mutator/html-reporter"
+            ],
+
+            "coverageAnalysis": "off",
+            "tsconfigFile": "tsconfig.json",
+            "files": [
+              "./libs/**/*.ts",
+              "./libs/**/*.html",
+              "./apps/karma-without-stryker-config/src/**/*.ts",
+              "./apps/karma-without-stryker-config/src/**/*.html",
+              "./apps/karma-without-stryker-config/src/**/*.scss",
+              "./apps/karma-without-stryker-config/**/*.json"
+            ],
+            "mutate": [
+              "./apps/karma-without-stryker-config/src/**/*.ts",
+              "./apps/karma-without-stryker-config/src/**/*.html",
+              "!./apps/karma-without-stryker-config/src/**/*.spec.ts"
+            ],
+            "fileLogLevel": "trace",
+            "logLevel": "debug",
+            "timeoutMS": 500000,
+            "reporters": ["html"]
+          }
+        }
+      }
+    },
+    "karma-without-stryker-config-e2e": {
+      "root": "apps/karma-without-stryker-config-e2e",
+      "sourceRoot": "apps/karma-without-stryker-config-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/karma-without-stryker-config-e2e/cypress.json",
+            "tsConfig": "apps/karma-without-stryker-config-e2e/tsconfig.e2e.json",
+            "devServerTarget": "karma-without-stryker-config:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "karma-without-stryker-config:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/karma-without-stryker-config-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/karma-without-stryker-config-e2e/**"]
           }
         }
       }

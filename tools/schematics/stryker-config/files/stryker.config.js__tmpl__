@@ -3,10 +3,6 @@ module.exports = function(config) {
     mutator: '<%= mutator %>',
     packageManager: '<%= packageManager %>',
     testRunner: '<%= testRunner %>',
-    <% if (testRunner === 'jest'){ %>
-    jest: {
-      config: require('<%= jestPath %>')
-    },<% } %>
     coverageAnalysis: '<%= coverageAnalysis %>',
     tsconfigFile: 'tsconfig.json',
     files: [<% for(let file of files){%> '<%= file %>',
