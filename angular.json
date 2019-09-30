@@ -299,7 +299,7 @@
         "mutate": {
           "builder": "@pinebox/angular-builder:mutate",
           "options": {
-            "configFile": "./apps/jest-with-stryker-config/stryker.config.js"
+            "configFile": "apps/jest-with-stryker-config/stryker.config.js"
           }
         }
       }
@@ -436,7 +436,6 @@
             ],
 
             "coverageAnalysis": "off",
-            "tsconfigFile": "tsconfig.json",
             "files": [
               "./libs/**/*.ts",
               "./libs/**/*.html",
