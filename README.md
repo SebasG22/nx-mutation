@@ -1,83 +1,83 @@
-# MutationDemo
-
-This project was generated using [Nx](https://nx.dev).
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="100"></p>
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
-## Quick Start & Documentation
+# Nx Mutation Testing
 
-[Nx Documentation](https://nx.dev/angular)
+It is very common that when a project grows rapidly, it is sought to minimize the amount of errors that can be injected into production code.
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+### Context
+The development team or the rockstar developer always seeks to have a very good result in the coverage of tests but this does not mean that this does not mean that it is 100% free of bugs or that the tests are strong to changes.
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
 
-## Adding capabilities to your workspace
+To address that, you opt for techniques such as mutation testing which seeks to generate different variations (mutations) of our tests and check how fragile the project changes.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+### What is mutation testing ?
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+Mutation testing is a fault-based testing technique where variations of a software program are subjected to the test dataset. This is done to determine the effectiveness of the test set in isolating the deviations.[1]
 
-Below are some plugins which you can add to your workspace:
+### What variations does apply ?
+The most common are: 
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+- Arithmetic operator replacement (+,-,/,*,%)
+- Logical connector replacement (&&, ||, ===,===)
+- Statement removal
+- Relational operator replacement (<=, >=)
+- Absolute value insertion, etc. ( value)
+
+[See Complete List](https://github.com/stryker-mutator/stryker-handbook/blob/master/mutator-types.md)
+
+If the test survives a variation we say that the generated mutant survived.
+
+## Which tools are available ?
+
+One of the most common tools it's stryker, It support many programming languages:
+
+- Javascript
+- .NET
+-
+
+Notes:
+
+- Mutation testing does not replace unit tests, rather they prove how resistent they are to changes.
+
+- Mutation testing checks the effectiveness of the unit tests against the different variations, this means that it is based on the unit tests.
+
+
+This repository contains practical examples of using the Sticker.io tool an an angular builder to mutation testing capabilites to Nx Workspaces.
+
+## Adding mutation testing to your workspace
+
+Nx supports  mutation testing as part of their core packages.
+
+You need add to your workspace:
+
+- [Stryker](https://angular.io)
+  - `ng add @nrwl/stryker`
 
 ## Generate an application
 
 Run `ng g @nrwl/angular:app my-app` to generate an application.
 
-> You can use any of the plugins above to generate applications as well.
+## Start using Stryker
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+There are two ways to use stryker in your project, one is with the `stryker.config.js` or use it over `angular.json`.
 
-## Generate a library
+### Generating stryker.config.js
 
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
+Run `ng g stryker my-app` to generate the stryker config for `my-app`.
 
-> You can also use any of the plugins above to generate libraries as well.
+### Modify angular json
+You can modify the `angular.json - mutate` target to pass it the configuration without explicit use `stryker.config.js`
 
-Libraries are sharable across libraries and applications. They can be imported from `@mutation-demo/mylib`.
+> It accepts most of the same parameters.
 
-## Development server
+## Running mutation tests
 
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `ng run my-app:mutate` to start the mutants.
 
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+## How to use on CI env ?
+Run `ng affected --target=mutate`
 
 ## Further help
 
